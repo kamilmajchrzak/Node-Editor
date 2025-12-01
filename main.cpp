@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <algorithm>
+#include <functional>
 
 struct Port {
     bool active = false;  // czy port jest połączony (aktywny)
@@ -17,6 +18,7 @@ struct Node {
     std::vector<Port> outputs;
 
     Color color = { 50, 120, 180, 255 };
+    Color content_color;
     int id;
 
     Node(int id_, const std::string& name, int numInputs, int numOutputs)
@@ -32,6 +34,9 @@ struct Node {
             p.active = (rand() % 3 == 0);
             outputs.push_back(p);
         }
+
+        content_color = {(unsigned char)(rand() % 255), (unsigned char)(rand() % 255), (unsigned char)(rand() % 255), 255};
+
     }
 
     void UpdateHitboxes() {
@@ -58,8 +63,9 @@ struct Node {
         DrawRectangleRounded({ position.x, position.y, (float)nodeWidth, (float)nodeHeight }, 0.2f, 10, color);
         DrawRectangleRoundedLines({ position.x, position.y, (float)nodeWidth, (float)nodeHeight }, 0.2f, 20, WHITE);
 
-        DrawText(label.c_str(), (int)position.x + 10, (int)position.y + 15, 16, WHITE);
+        //DrawText(label.c_str(), (int)position.x + 10, (int)position.y + 15, 16, WHITE); // Replace with std::function, so to draw whatever digit/text/vector/bitmap/
 
+        DrawCircle(this->position.x + (nodeWidth/2), this->position.y + (nodeHeight/2), 40, content_color);
         const int portSpacing = 20;
         const int portSize = 10;
 
@@ -191,7 +197,7 @@ int main() {
             Vector2 cp2 = { end.x   - 80, end.y };
             // Raylib nie ma DrawCubicBezier, więc użyjemy przybliżenia przez DrawLineBezier (liniowy Bézier) lub ręcznie...
             // Alternatywa: rysujemy "pseudo-bezier" jako dwa segmenty lub używamy własnej funkcji — tu dla prostoty:
-            DrawLineBezier(start, end, 30, Fade(ORANGE, 0.7f));
+            DrawLineBezier(start, end, 5, Fade(ORANGE, 0.7f));
         }
 
         // Rysuj węzły
