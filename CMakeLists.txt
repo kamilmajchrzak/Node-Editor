@@ -9,7 +9,9 @@ find_package(raylib REQUIRED)
 
 
 # Dodajemy main.cpp jako główny plik źródłowy
-add_executable(NodeEdit main.cpp)
+add_executable(NodeEdit main.cpp
+        Node.cpp
+        Node.h)
 
 # Linkowanie raylib i jego zależności
 target_link_libraries(NodeEdit raylib ${SNDFILE_LIBRARIES})
@@ -18,6 +20,8 @@ target_link_libraries(NodeEdit raylib ${SNDFILE_LIBRARIES})
 # macOS (OpenGL i inne):
 if(APPLE)
     target_link_libraries(NodeEdit "-framework OpenGL" "-framework Cocoa" "-framework IOKit" "-framework CoreVideo")
+    target_compile_options(NodeEdit PRIVATE -fsanitize=undefined)
+    target_link_options(NodeEdit PRIVATE -fsanitize=undefined)
 endif()
 
 # Linux (czasem trzeba dołączyć dodatkowe biblioteki ręcznie):

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.84 74.43">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: ArialMT, Arial;
+        font-size: 24px;
+      }
+
+      .cls-1, .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-3 {
+        stroke-miterlimit: 5.35;
+        stroke-width: 3.54px;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        stroke: #000;
+        stroke-linecap: square;
+      }
+
+      .cls-4 {
+        stroke-width: 3.54px;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-5 {
+        stroke-width: 3.54px;
+      }
+    </style>
+  </defs>
+  <g id="svg5448">
+    <g id="g3143">
+      <rect id="rect3811" class="cls-5" x="1.77" y="9.08" width="99.3" height="56.48"/>
+      <g id="text3813" class="cls-2">
+        <text class="cls-1" transform="translate(25.09 46.05)"><tspan x="0" y="0">7404</tspan></text>
+      </g>
+      <path id="path3821" class="cls-4" d="M8.64,8.88V1.79"/>
+      <path id="path3823" class="cls-4" d="M22.82,8.88V1.79"/>
+      <path id="path3825" class="cls-4" d="M36.99,8.88V1.79"/>
+      <path id="path3829" class="cls-4" d="M8.64,72.66v-7.09"/>
+      <path id="path3831" class="cls-4" d="M22.82,72.66v-7.09"/>
+      <path id="path3833" class="cls-4" d="M36.99,72.66v-7.09"/>
+      <path id="path3835" class="cls-4" d="M51.18,8.86V1.77"/>
+      <path id="path3837" class="cls-4" d="M65.35,8.86V1.77"/>
+      <path id="path3839" class="cls-4" d="M79.53,8.86V1.77"/>
+      <path id="path3841" class="cls-4" d="M93.7,8.86V1.77"/>
+      <path id="path3843" class="cls-4" d="M51.18,72.64v-7.09"/>
+      <path id="path3845" class="cls-4" d="M65.35,72.64v-7.09"/>
+      <path id="path3847" class="cls-4" d="M79.53,72.64v-7.09"/>
+      <path id="path3849" class="cls-4" d="M93.7,72.64v-7.09"/>
+      <path id="path5336" class="cls-3" d="M11.23,15.86c0,1.31-1.06,2.37-2.37,2.37s-2.37-1.06-2.37-2.37h0c0-1.31,1.06-2.37,2.37-2.37h0c1.31,0,2.37,1.06,2.37,2.37Z"/>
+    </g>
+  </g>
+</svg>
